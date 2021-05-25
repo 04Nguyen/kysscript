@@ -1,0 +1,82 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Refuse = Instance.new("TextButton")
+local Accept = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(0.0604949594, 0, 0.30859375, 0)
+Frame.Size = UDim2.new(0, 167, 0, 258)
+Frame.Active = true
+Frame.Draggable = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+TextLabel.Size = UDim2.new(0, 167, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "K.Y.S"
+TextLabel.TextColor3 = Color3.fromRGB(255, 0, 4)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Refuse.Name = "Refuse"
+Refuse.Parent = Frame
+Refuse.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Refuse.BackgroundTransparency = 0.500
+Refuse.Position = UDim2.new(0.101796404, 0, 0.63565892, 0)
+Refuse.Size = UDim2.new(0, 53, 0, 30)
+Refuse.Font = Enum.Font.SourceSans
+Refuse.Text = "Refuse"
+Refuse.MouseButton1Down:Connect(function()
+	game:GetService("Players").LocalPlayer:Kick("Pussy, you have no balls")
+end)
+
+
+Refuse.TextColor3 = Color3.fromRGB(0, 0, 0)
+Refuse.TextScaled = true
+Refuse.TextSize = 14.000
+Refuse.TextWrapped = true
+
+Accept.Name = "Accept"
+Accept.Parent = Frame
+Accept.BackgroundColor3 = Color3.fromRGB(32, 255, 61)
+Accept.BackgroundTransparency = 0.500
+Accept.Position = UDim2.new(0.538922131, 0, 0.63565892, 0)
+Accept.Size = UDim2.new(0, 53, 0, 30)
+Accept.Font = Enum.Font.SourceSans
+Accept.Text = "Accept"
+Accept.TextColor3 = Color3.fromRGB(0, 0, 0)
+Accept.TextScaled = true
+Accept.TextSize = 14.000
+Accept.TextWrapped = true
+Accept.MouseButton1Down:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+	wait(0.5)
+	game:GetService("Players").LocalPlayer:Kick("King")
+end)
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0718562901, 0, 0.310077518, 0)
+TextLabel_2.Size = UDim2.new(0, 143, 0, 35)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Would you do it?"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
